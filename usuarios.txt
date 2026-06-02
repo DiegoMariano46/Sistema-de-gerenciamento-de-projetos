@@ -1,0 +1,2 @@
+Administrador;Admin;adm@email.com;1234;00000000000;ADMINISTRADOR;Admin
+Diego Mariano;diego123;diego@email.com;1234;12345678911;GERENTE;Analista
