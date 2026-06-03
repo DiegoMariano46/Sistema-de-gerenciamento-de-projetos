@@ -85,20 +85,26 @@ public class EquipeService{
 
 
 }
-    public void listarEquipes(){
-    if (equipes.isEmpty()) {
+    public void listarEquipes() {
+        if (equipes.isEmpty()) {
             System.out.println("Nenhuma equipe cadastrada.");
             return;
         }
 
-        for (Equipe equipe:equipes){          
-                System.out.println("--------------------------------");
-                System.out.println("Nome: " + equipe.getNomeEquipe());
-                System.out.println("Descrição: "+equipe.getDescricao());
-                System.out.println("--------------------------------");
+        for (Equipe equipe : equipes) {
+            System.out.println("Equipe: " + equipe.getNomeEquipe());
 
+            if (equipe.getMembros().isEmpty()) {
+                System.out.println("Sem membros.");
+            } else {
+                System.out.println("Membros:");
+                for (User membro : equipe.getMembros()) {
+                    System.out.println("- " + membro.getName());
+                }
+            }
+
+            System.out.println("--------------------");
         }
-
     }
     public void removerMembroEquipe(Scanner sc, Equipe equipeEscolhida){
       int id;
